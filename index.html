@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <h1>Password Generator</h1>
-    <p>Welcome to the Password Generator, here you can make a randomized password using symbols, numbers and letters alike. Click the check box on whether you wish to include numbers and symbols as well as enter the amount of characters you want your password to be long and then hit "generate password"</p>
-    Character Length: <input type="number" min="5" max="50"/> <br>
-    Include Numbers: <input type="checkbox" id="num"/> <br>
-    Include Symbols: <input type="checkbox" id="sym"/> <br>
-    <button type="button"> Generate Password</button>
-   
+<p>
+Welcome to the Password Generator, here you can make a randomized password using symbols, numbers and letters alike. Click the check box on whether you wish to include numbers and symbols as well as enter the amount of characters you want your password to be long and then hit "generate password."
+</p>
+
+
+Password Criteria: 
+<ul>
+<li>Must be at least 8 characters and no greater than 128 characters.</li>
+</ul>
+
+How many characters? <input type="number" id="charNum" min="8" max="128" /><br />
+Uppercase: <input type="checkbox" id="upperCase"/> <br>
+Include Numbers: <input type="checkbox" id="numbers"/> <br>
+Include Symbols: <input type="checkbox" id="symbols"/> <br>
+<button id="submit" class="btn btn-primary">Generate Password</button><br />
+Password: <input type="text" id="yourPw" size="80"/>
+
 </body>
-</html>
