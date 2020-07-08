@@ -30,7 +30,7 @@ function password(l,characters){
 function myFunction() {
     var x, text;
     x = document.getElementById("charNum").value;
-    if (isNaN(x) || x < 8 || x > 100) {
+    if (isNaN(x) || x < 8 || x > 128) {
       alert("Please enter a vlaue from 8 to 128.");
     } 
    
