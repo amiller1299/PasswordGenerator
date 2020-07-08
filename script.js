@@ -1,28 +1,37 @@
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = '0123456789';
-var symbols = '!@#$%^&*=-_';
+var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var char = 'abcdefghijklmnopqrstuvwxyz';
+var num = '0123456789';
+var sym = '!@#$%^&*=-_';
 
-var lowerCaseNum = document.getElementById("lowerCaseNum");
+var charNum = document.getElementById("charNum");
 var upperCaseBox = document.getElementById("upperCase");
-var numbersBox = document.getElementById("numbers");
-var symbolsBox = document.getElementById("symbols");
+var numBox = document.getElementById("num");
+var symBox = document.getElementById("sym");
 var submit = document.getElementById("submit");
 var yourPw = document.getElementById("yourPw");
 
+
 submit.addEventListener("click",function(e){
-    var characters = lowerCase;
-    (upperCasebox.checked) ? characters += upperCase : '';
-    (numbersBox.checked) ? characters += numbers : '';
-    (symbolsBox.checked) ? characters += symbols : '';
-    yourPw.value = password(lowerCaseNum.value, characters);
+    var characters = char;
+    (upperCaseBox.checked) ? characters += upperCase : '';
+    (numBox.checked) ? characters += num : '';
+    (symBox.checked) ? characters += sym : '';
+    yourPw.value = password(charNum.value, characters);
 });
 
-
 function password(l,characters){
-		var passWord = '';
+        var pwd = '';
     for(var i = 0; i<l; i++){
-    		passWord += characters.charAt(Math.floor(Math.random() * characters.length));
+            pwd += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    return passWord;
+    alert(pwd);
 }
+
+function myFunction() {
+    var x, text;
+    x = document.getElementById("charNum").value;
+    if (isNaN(x) || x < 8 || x > 100) {
+      alert("Please enter a vlaue from 8 to 128.");
+    } 
+   
+  }
