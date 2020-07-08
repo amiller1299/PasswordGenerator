@@ -1,29 +1,45 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="stylesheet" href="style.css" type="text/css>
+  <script type="text/javascript" src="hw3scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="hw3style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
     <title>Document</title>
 </head>
 <body>
+<h1>Password Generator</h1>
 <p>
-Welcome to the Password Generator, here you can make a randomized password using symbols, numbers and letters alike. Click the check box on whether you wish to include numbers and symbols as well as enter the amount of characters you want your password to be long and then hit "generate password."
+Welcome to Password Generator, here you can make a randomized password using symbols, numbers and letters alike. Click the check box on whether you wish to include numbers and symbols as well as enter the amount of characters you want your password to be long and then hit "Generate." <br>
+You must input a number into the field between 8 and 128.
 </p>
 
 
-Password Criteria: 
-<ul>
-<li>Must be at least 8 characters and no greater than 128 characters.</li>
-</ul>
+<div class="password">
+<div class="form-group col-sm-4">
+<div id="inputs">
 
-How many characters? <input type="number" id="charNum" min="8" max="128" /><br />
+How many characters? <input type="number" class="form-control" size="4" placeholder="Input password length" id="charNum" min="8" max="128" maxlength="3" required/> <br>
+<p>Please check whichever you wish to include in your random password.</p>
+
+<form>
+  <div id=boxes">
 Uppercase: <input type="checkbox" id="upperCase"/> <br>
-Include Numbers: <input type="checkbox" id="numbers"/> <br>
-Include Symbols: <input type="checkbox" id="symbols"/> <br>
-<button id="submit" class="btn btn-primary">Generate Password</button><br />
-Password: <input type="text" id="yourPw" size="80"/>
+Number: <input type="checkbox" id="num"/> <br>
+Symbol: <input type="checkbox" id="sym"/> <br>
+</div>
+</div>
+<div id="button">
+<button onclick="myFunction()" class="btn btn-primary" id="submit" >Generate</button> <br>
 
+
+<script type="text/javascript" src="hw3scripts.js"></script>
+</form>
+</div>
+</div>
+</div>
 </body>
+</html>
